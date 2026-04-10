@@ -1,35 +1,32 @@
-# us2024-election-toxicity
+# "F&#42;&#42;&#42; You Biden": Cross-Partisan Electoral Toxicity on X
 
-Data and analysis for the paper:
+Data and analysis for the paper accepted at the **7th International Workshop on Cyber Social Threats (CySoc 2026)** at ICWSM 2026.
 
-**"F*** You Biden": Cross-Partisan Electoral Toxicity on X**
-Danishjeet Singh, Anindya Mondal, Filippo Menczer
+**Authors:** Danishjeet Singh, Anindya Mondal, Filippo Menczer
 Observatory on Social Media (OSoMe), Indiana University Bloomington
 
 ---
 
 ## Repository Contents
 
-### Data (TODO: add files)
-- `posts_preds.csv` — post IDs + GPT-4o-mini political leaning labels (Democrat / Republican / Unsure)
-- `replies_preds.parquet` — reply IDs + per-reply political leaning labels + user ID + original post ID
-- `posts_tox_scores.csv` — post IDs + Perspective API toxicity scores
-- `replies_tox_scores.csv` — reply IDs + Perspective API toxicity scores
+### Data (`data/`)
 
-> Raw tweet text is not released in accordance with X's Terms of Service. Use the tweet IDs to rehydrate via the X API.
+- `all_posts_data.parquet` — 261,501 original posts with tweet ID, GPT-4o-mini political leaning label (Democrat / Republican / Unsure), and Perspective API toxicity score.
+- `all_replies_data.parquet` — 2,415,781 direct replies with reply ID, per-reply political leaning label, user ID, original post ID, and toxicity score.
+- `gold_standard_posts_384.parquet` — 384-item human-annotated gold standard for the post classifier. Contains tweet ID, human consensus label (`final_label`), and GPT-4o-mini prediction (`political_leaning_pred`).
+- `gold_standard_replies_384.parquet` — 384-item human-annotated gold standard for the reply classifier. Same structure as above.
+- `prompt_posts.txt` — System and user prompts used to classify the political leaning of original posts.
+- `prompt_replies.txt` — User prompt used to classify the political leaning of reply authors, given the original tweet, reply text, and author bio.
 
-### Prompts (TODO: add file)
-- `prompts.md` — full system and user prompts used for GPT-4o-mini post and reply classification (also reproduced in paper Appendix)
+### Analysis
 
-### Analysis (TODO: add notebook)
-- `final_analysis.ipynb` — reproduces all reported results: MWU tests, figures, composition statistics
+- `analysis.ipynb` — Reproduces all reported results: MWU tests with effect sizes (Cliff's delta), KDE figures, partisan composition statistics, unique user counts, and classifier F1 scores on the gold standard.
 
 ---
 
 ## Dataset
 
-Built on top of the [US2024-Twitter-Elections](https://github.com/osome-iu/US2024-Twitter-Elections) dataset.
-Covers May–November 2024. \~261k original posts and \~2.4M direct replies.
+Uses data from the [x-24-us-election](https://github.com/sinking8/x-24-us-election) dataset, covering May–November 2024.
 
 ## Models Used
 - **Political classification:** `gpt-4o-mini-2024-07-18` via OpenAI API
