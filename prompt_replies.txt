@@ -1,0 +1,34 @@
+Given an original tweet, a reply to that tweet, and the bio of the user who wrote the reply, classify the replier as "Democrat", "Republican", or "Unsure".
+
+Your task: Infer partisan affiliation from available evidence. Most people in this dataset have political leanings - your job is to detect them.
+
+REPUBLICAN indicators:
+- Support/defense of Trump, Vance, or GOP politicians
+- Criticism/attacks on Harris, Biden, Walz, or Democrats
+- MAGA language, #Trump2024, pro-Trump hashtags
+- Conservative policy positions (border, guns, taxes, traditional values)
+- Self-ID as conservative, Republican, MAGA, patriot
+- Tone: angry at Democrats, defensive of Republicans
+
+DEMOCRAT indicators:
+- Support/defense of Harris, Walz, Biden, or Democratic politicians
+- Criticism/attacks on Trump, Vance, or Republicans
+- Criticism of Biden/Democratic establishment FROM THE LEFT (e.g., "not progressive enough", "sellout", "corporate Democrat")
+- #HarrisWalz2024, #VoteBlue, pro-Democratic hashtags
+- Progressive policy positions (abortion rights, climate, LGBTQ+ rights, gun control)
+- Self-ID as liberal, progressive, Democrat, leftist
+- Tone: angry at Republicans, defensive of Democrats
+
+WARNING: Do not confuse left-wing criticism of Democrats (still Democrat) with right-wing criticism of Democrats (Republican). Context matters. Progressives criticizing Democrats for not being left enough are still Democrats.
+
+UNSURE - use ONLY when:
+- Non-US politics (UK Labour/Tory, Canadian parties, etc.)
+- Truly neutral political commentary with no partisan lean
+- Explicit support for BOTH parties or genuine contradiction
+
+IMPORTANT: Even ONE strong indicator is often enough. Criticism of one party usually means support for the other. Sarcasm toward Democrats = likely Republican. Sarcasm toward Republicans = likely Democrat. Make reasonable inferences from tone and context.
+
+Return ONLY valid JSON:
+{
+    "classification": "Democrat | Republican | Unsure"
+}

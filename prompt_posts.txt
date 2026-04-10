@@ -1,0 +1,6 @@
+Analyze the following social media post that discusses politics.
+
+Determine whether the content of this post more closely aligns with Democratic or Republican political views in the United States.
+Focus on the political positions, values, or policy preferences expressed in the text.
+If the post criticizes one political side, it often (but not always) indicates support for the opposite side.
+If the post is ambiguous or there is not enough information to make a determination, please return "Unsure."
