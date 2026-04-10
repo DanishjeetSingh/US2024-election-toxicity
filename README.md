@@ -1,9 +1,16 @@
-# "F&#42;&#42;&#42; You Biden": Cross-Partisan Electoral Toxicity on X
+Data and code for the paper 
 
-Data and code for the paper accepted at the **7th International Workshop on Cyber Social Threats (CySoc 2026)** at ICWSM 2026.
-
-**Authors:** Danishjeet Singh, Anindya Mondal, Filippo Menczer
-Observatory on Social Media (OSoMe), Indiana University Bloomington
+```bibtex
+@inproceedings{singh2026crosspartisan,
+  title={"F*** You Biden": Cross-Partisan Electoral Toxicity on X},
+  author={Singh, Danishjeet and Mondal, Anindya and Menczer, Filippo},
+  booktitle={Proceedings of the ICWSM International Workshop on Cyber Social Threats (CySoc 2026)},
+  year={2026},
+  note={Forthcoming; preprint arXiv:XYZ}
+  doi={XYZ}
+  url={XYZ}
+}
+```
 
 ---
 
@@ -31,14 +38,3 @@ Uses data from the [x-24-us-election](https://github.com/sinking8/x-24-us-electi
 ## Models Used
 - **Political classification:** `gpt-4o-mini-2024-07-18` via OpenAI API
 - **Toxicity scoring:** Perspective API
-
-## Citation
-
-```bibtex
-@inproceedings{singh2026crosspartisan,
-  title={"F*** You Biden": Cross-Partisan Electoral Toxicity on X},
-  author={Singh, Danishjeet and Mondal, Anindya and Menczer, Filippo},
-  booktitle={Proceedings of the ICWSM Workshop},
-  year={2026}
-}
-```
