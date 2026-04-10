@@ -18,7 +18,7 @@ Observatory on Social Media (OSoMe), Indiana University Bloomington
 - `prompt_posts.txt` — System and user prompts used to classify the political leaning of original posts.
 - `prompt_replies.txt` — User prompt used to classify the political leaning of reply authors, given the original tweet, reply text, and author bio.
 
-### Analysis
+### Code
 
 - `analysis.ipynb` — Reproduces all reported results: MWU tests with effect sizes (Cliff's delta), KDE figures, partisan composition statistics, unique user counts, and classifier F1 scores on the gold standard.
 
