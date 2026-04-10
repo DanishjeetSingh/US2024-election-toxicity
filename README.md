@@ -1,6 +1,6 @@
 # "F&#42;&#42;&#42; You Biden": Cross-Partisan Electoral Toxicity on X
 
-Data and analysis for the paper accepted at the **7th International Workshop on Cyber Social Threats (CySoc 2026)** at ICWSM 2026.
+Data and code for the paper accepted at the **7th International Workshop on Cyber Social Threats (CySoc 2026)** at ICWSM 2026.
 
 **Authors:** Danishjeet Singh, Anindya Mondal, Filippo Menczer
 Observatory on Social Media (OSoMe), Indiana University Bloomington
